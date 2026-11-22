@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1(b) - CSS Box Model | CAT2 (25/03809)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+            color: #222;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header-bar {
+            background-color: #1a1a2e;
+            color: #ffffff;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-bar a {
+            color: #f0a500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        pre.diagram {
+            background-color: #1e1e2f;
+            color: #00ffcc;
+            padding: 18px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .demo-wrapper {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 6px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        /* Live E-Commerce Product Card Demonstrating the Box Model */
+        .product-card {
+            background-color: #ffffff;
+            width: 240px;             /* Content width */
+            padding: 20px;            /* Padding: inner breathing room */
+            border: 3px solid #0056b3;/* Border: visible frame around padding & content */
+            margin: 15px;             /* Margin: outer spacing separating adjacent cards */
+            border-radius: 6px;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            background-color: #dfe6e9;
+            border-radius: 4px;
+        }
+        .price {
+            color: #d63031;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .btn-buy {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <span><strong>Name:</strong> CAT2 | <strong>Reg No:</strong> 25/03809</span>
+        <a href="index.html">&larr; Back to Main Menu (index.html)</a>
+    </div>
+
+    <div class="container">
+        <h1>Question 1(b): The CSS Box Model (4 Marks)</h1>
+        <p>Every HTML element rendered in a browser is treated as a rectangular box consisting of four concentric layers: <strong>Content</strong>, <strong>Padding</strong>, <strong>Border</strong>, and <strong>Margin</strong>.</p>
+
+        <h3>Labelled Diagram of the CSS Box Model</h3>
+        <pre class="diagram">
++-------------------------------------------------------------------+
+|                             MARGIN                                |
+|   (Transparent outer space separating adjacent product cards)     |
+|   +-----------------------------------------------------------+   |
+|   |                          BORDER                           |   |
+|   |   (Visible frame wrapping the padding and content)        |   |
+|   |   +---------------------------------------------------+   |   |
+|   |   |                     PADDING                       |   |   |
+|   |   |   (Inner space between content and border)        |   |   |
+|   |   |   +-------------------------------------------+   |   |   |
+|   |   |   |                 CONTENT                   |   |   |   |
+|   |   |   |  (Product Image, Title, Price, Button)    |   |   |   |
+|   |   |   +-------------------------------------------+   |   |   |
+|   |   +---------------------------------------------------+   |   |
+|   +-----------------------------------------------------------+   |
++-------------------------------------------------------------------+
+        </pre>
+
+        <h3>How Each Component Affects an E-Commerce Product Card</h3>
+        <ul>
+            <li><strong>1. Content:</strong> The innermost area where actual product information—such as the product photo, item name, price tag, and "Add to Cart" button—is displayed. Its dimensions are controlled by <code>width</code> and <code>height</code>.</li>
+            <li><strong>2. Padding:</strong> The transparent inner cushion between the content and the card's border. It prevents product text and images from touching the card edges, improving readability and visual appeal.</li>
+            <li><strong>3. Border:</strong> The visible line surrounding the padding and content. It visually defines the boundary of each product card (e.g., a <code>3px solid</code> outline) so shoppers can distinguish individual items.</li>
+            <li><strong>4. Margin:</strong> The transparent outer space outside the border. It separates neighboring product cards from one another in a catalog grid so they do not collide or look cluttered.</li>
+        </ul>
+
+        <h3>Live Demonstration: E-Commerce Product Cards</h3>
+        <div class="demo-wrapper">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/240x140?text=Wireless+Headphones" alt="Wireless Headphones">
+                <h4>Wireless Headphones</h4>
+                <p class="price">Ksh 4,500</p>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/240x140?text=Smart+Watch" alt="Smart Watch">
+                <h4>Smart Fitness Watch</h4>
+                <p class="price">Ksh 6,200</p>
+                <button class="btn-buy">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

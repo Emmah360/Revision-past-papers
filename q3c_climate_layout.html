@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3(c) - Climate Awareness Campaign | CAT2 (25/03809)</title>
+    <!-- Readable Google-safe font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7f4;
+            color: #1b4332;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2d6a4f;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        header a {
+            color: #b7e4c7;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        /* Two-column Flexbox layout */
+        .layout-container {
+            display: flex;
+            max-width: 1100px;
+            margin: 25px auto;
+            gap: 25px;
+            padding: 0 20px;
+        }
+        .sidebar {
+            flex: 1; /* Takes 1 part (~30% width) */
+            background-color: #d8f3dc;
+            padding: 20px;
+            border-left: 5px solid #2d6a4f;
+            border-radius: 6px;
+        }
+        .main-content {
+            flex: 2.5; /* Takes 2.5 parts (~70% width) */
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #1b4332;
+            color: #ffffff;
+            margin-top: 30px;
+        }
+        /* Media query: collapse to single column below 600px */
+        @media (max-width: 600px) {
+            .layout-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Green Kenya Climate Awareness Campaign</h1>
+        <p><a href="index.html">&larr; Back to CAT2 (25/03809) Main Menu</a></p>
+    </header>
+
+    <div class="layout-container">
+        <!-- Left Sidebar: Quick Facts -->
+        <aside class="sidebar">
+            <h2>Quick Facts</h2>
+            <ul>
+                <li><strong>Forest Cover Target:</strong> Kenya aims to plant 15 billion trees by 2032.</li>
+                <li><strong>Renewable Energy:</strong> Over 85% of Kenya's electricity comes from geothermal, hydro, wind, and solar power.</li>
+                <li><strong>Rising Temperatures:</strong> East Africa faces increasingly erratic rainfall and prolonged droughts.</li>
+                <li><strong>Youth Action:</strong> Local community tree nurseries restore degraded watersheds.</li>
+            </ul>
+        </aside>
+
+        <!-- Right Main Article Content -->
+        <main class="main-content">
+            <h2>Protecting Our Environment for Future Generations</h2>
+            <p>
+                Climate change poses a direct threat to agriculture, water security, and biodiversity across Kenya. 
+                From melting glaciers on Mount Kenya to recurring droughts in arid and semi-arid lands, the impact 
+                of global warming is already visible in everyday livelihoods.
+            </p>
+            <p>
+                Through community-led reforestation, sustainable clean-energy adoption, and plastic waste reduction, 
+                citizens and policymakers can build climate-resilient neighborhoods. Resize this browser window below 
+                <strong>600px</strong> to see the sidebar and main article stack into a mobile-friendly single column.
+            </p>
+        </main>
+    </div>
+
+    <footer>
+        <p>Name: CAT2 | Registration No: 25/03809 | CP 702: Internet Application Programming</p>
+    </footer>
+
+</body>
+</html>
